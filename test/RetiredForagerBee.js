@@ -47,4 +47,11 @@ describe('RetiredForagerBee class functionality', () => {
     expect(retiredForagerBee.treasureChest).to.have.length(2);
   });
 
+  it('should add mounds and mounds of sticky GOLD to the retired Forager Bees Honey1k account', () => {
+    retiredForagerBee.honey1k(10000);
+    retiredForagerBee.honey1k(20000);
+    retiredForagerBee.honey1k(30000);
+    expect(retiredForagerBee.honeyJar).to.equal(60000);
+  })
+
 });
